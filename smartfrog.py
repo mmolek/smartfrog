@@ -1,14 +1,14 @@
 import flask
 from shelljob import proc
 
-app = flask.Flask(__name__)
+application = flask.Flask(__name__)
 
-@app.route("/")
+@application.route("/")
 def hello():
     return "<h1 style='color:blue'>Hello There! Test lala!</h1>"
 
 
-@app.route( '/version' )
+@application.route( '/version' )
 def stream():
     g = proc.Group()
     p = g.run( [ "cat", ".git/refs/heads/master" ] )
@@ -22,4 +22,4 @@ def stream():
     return flask.Response( read_process(), mimetype= 'text/plain' )
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0')
+    application.run(debug=True, host='0.0.0.0')
