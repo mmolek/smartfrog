@@ -5,7 +5,7 @@ application = flask.Flask(__name__)
 
 @application.route("/")
 def hello():
-    return "<h1 style='color:blue'>Hello There! Test lala!</h1>"
+    return "<h1>Hello There SmartFrog! :)</h1>"
 
 
 @application.route( '/version' )
@@ -23,3 +23,4 @@ def stream():
 
 if __name__ == "__main__":
     application.run(debug=True, host='0.0.0.0')
+
