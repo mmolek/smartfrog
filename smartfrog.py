@@ -5,7 +5,7 @@ application = flask.Flask(__name__)
 
 @application.route("/")
 def hello():
-    return "<h1>Hello There SmartFrog! :) :) :)</h1>"
+    return "<h1>Hello There SmartFrog!</h1>"
 
 
 @application.route( '/version' )
